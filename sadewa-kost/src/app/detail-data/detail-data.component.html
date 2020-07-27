@@ -1,0 +1,22 @@
+<h3 mat-dialog-title>{{data.nama}}</h3>
+<div mat-dialog-content>
+<mat-list>
+    <h3 matSubheader>Detail Kwitansi</h3>
+    <mat-list-item>
+        <h3 mat-line>{{data.terbilang}}</h3>
+        <mat-divider></mat-divider>
+    </mat-list-item>
+    <mat-list-item>
+        <h3 mat-line>{{data.perihal}}</h3>
+        <mat-divider></mat-divider>
+    </mat-list-item>
+    <mat-list-item>
+        <h3 mat-line>{{data.tanggal}}</h3>
+        <mat-divider></mat-divider>
+    </mat-list-item>
+</mat-list>
+</div>
+<mat-dialog-actions>
+    <span class="spacer"></span>
+    <button mat-button mat-dialog-close>Tutup</button>
+  </mat-dialog-actions>

@@ -1,0 +1,30 @@
+<div class="container">
+    <button class="btn-tambah" mat-flat-button color="accent" (click)="buatKwitansi()">Buat Kwitansi</button>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Kwitansi Pembayaran</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item *ngFor="let item of dataKwitansi">
+            <img matListAvatar src="assets/fotoku kotak.jpg" alt="...">
+            <h3 matLine> {{item.nama}}</h3>
+            <p matLine>
+              <span> {{item.terbilang}} </span>
+            </p>
+            <p matLine>
+              <span>{{item.tanggal}}</span>
+            </p>
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>menu</mat-icon>
+              </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="detailKwitansi(item)">Detail</button>
+                <button mat-menu-item (click)="editKwitansi(item)">ubah</button>
+                <button mat-menu-item (click)="konfirmasiHapus(item.id)">hapus</button>
+              </mat-menu>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
